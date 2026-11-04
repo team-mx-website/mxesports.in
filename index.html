@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MX ESPORTS | Maximum Xtreme</title>
+<meta name="description" content="MX ESPORTS - Maximum Xtreme. Competitive BGMI Esports, tournaments and gaming community.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;color:white;font-family:Arial,sans-serif}
+:root{--red:#ff3030;--dark:#111}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:#101010;border-bottom:1px solid #292929;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:900;color:white}
+.logo span{color:var(--red)}
+nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px}
+nav a:hover{color:var(--red)}
+.hero{min-height:570px;display:flex;align-items:center;padding:70px 8%;background:radial-gradient(ellipse at 80% 50%,#4a1010 0%,#190909 30%,#080808 72%)}
+.hero-content{max-width:650px}
+.tag{color:var(--red);letter-spacing:4px;font-weight:bold;font-size:13px}
+h1{font-size:clamp(48px,9vw,90px);line-height:1;margin:20px 0}
+h1 span{color:var(--red)}
+.hero p{color:#bbb;line-height:1.8;font-size:17px}
+.btn{display:inline-block;margin-top:28px;background:var(--red);color:white;padding:15px 25px;text-decoration:none;font-weight:bold;border-radius:4px}
+.btn:hover{background:#d00000}
+section{padding:75px 8%}
+.heading{text-align:center;font-size:34px;margin-bottom:12px}
+.heading span{color:var(--red)}
+.sub{text-align:center;color:#999;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#141414;padding:28px;border:1px solid #292929;border-radius:8px}
+.card h3{color:var(--red);margin-bottom:14px}
+.card p{color:#aaa;line-height:1.7}
+.icon{font-size:35px;margin-bottom:15px}
+.about{background:#101010}
+.team-card{text-align:center}
+.team-card .icon{font-size:50px}
+.register{background:linear-gradient(120deg,#210909,#101010);text-align:center}
+.register p{color:#bbb;line-height:1.8;max-width:600px;margin:auto}
+.contact{text-align:center}
+footer{padding:25px;text-align:center;background:#111;color:#888;border-top:1px solid #292929}
+footer span{color:var(--red)}
+@media(max-width:600px){
+header{padding:17px 5%;flex-wrap:wrap;gap:15px}
+nav{width:100%;display:flex;justify-content:space-between}
+nav a{margin:0;font-size:12px}
+.hero{min-height:480px;padding:55px 7%}
+section{padding:55px 6%}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MX <span>ESPORTS</span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#team">Team</a>
+<a href="#tournaments">Tournaments</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<main>
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="tag">WELCOME TO THE NEXT LEVEL</div>
+<h1>MX <span>ESPORTS</span></h1>
+<p>MAXIMUM XTREME</p>
+<p>We don't just play the game. We dominate the battlefield. Join our esports community and be a part of the action.</p>
+<a class="btn" href="#tournaments">EXPLORE MORE →</a>
+</div>
+</div>
+
+<section class="about" id="about">
+<h2 class="heading">ABOUT <span>US</span></h2>
+<p class="sub">The power behind Maximum Xtreme</p>
+<div class="cards">
+<div class="card">
+<div class="icon">🎮</div>
+<h3>Our Mission</h3>
+<p>To build a strong esports community and support competitive gaming talent.</p>
+</div>
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Our Vision</h3>
+<p>To compete, improve and make our mark in the Indian esports scene.</p>
+</div>
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Our Goal</h3>
+<p>Creating opportunities for gamers through teamwork and competition.</p>
+</div>
+</div>
+</section>
+
+<section id="team">
+<h2 class="heading">OUR <span>TEAM</span></h2>
+<p class="sub">Meet the MX ESPORTS family</p>
+<div class="cards">
+<div class="card team-card">
+<div class="icon">👑</div>
+<h3>MX MANAGEMENT</h3>
+<p>Leadership & Management</p>
+</div>
+<div class="card team-card">
+<div class="icon">🎯</div>
+<h3>MX PLAYERS</h3>
+<p>Competitive Gaming Roster</p>
+</div>
+<div class="card team-card">
+<div class="icon">🔥</div>
+<h3>MX COMMUNITY</h3>
+<p>Our gaming family</p>
+</div>
+</div>
+</section>
+
+<section class="about" id="tournaments">
+<h2 class="heading">BGMI <span>TOURNAMENTS</span></h2>
+<p class="sub">Enter the battlefield. Show your skills.</p>
+<div class="cards">
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Upcoming Events</h3>
+<p>Stay tuned for upcoming MX ESPORTS tournaments and announcements.</p>
+</div>
+<div class="card">
+<div class="icon">⚔️</div>
+<h3>Competitive Matches</h3>
+<p>Challenge yourself and compete with talented players.</p>
+</div>
+</div>
+</section>
+
+<section class="register">
+<h2 class="heading">JOIN <span>MX ESPORTS</span></h2>
+<p>Want to become part of our team? Follow our social media and contact our management for recruitment and tournament updates.</p>
+<a class="btn" href="#contact">CONTACT MANAGEMENT</a>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="heading">CONTACT <span>US</span></h2>
+<p class="sub">Connect with MX ESPORTS</p>
+<p style="color:#bbb">Instagram: @officialmxislive</p>
+<a class="btn" href="https://www.instagram.com/officialmxislive/" target="_blank">FOLLOW ON INSTAGRAM ↗</a>
+</section>
+</main>
+
+<footer>
+<p>© 2026 <span>MX ESPORTS</span> | MAXIMUM XTREME</p>
+<p style="margin-top:8px">COMPETE • DOMINATE • CONQUER</p>
+</footer>
+</body>
+</html>
