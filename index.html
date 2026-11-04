@@ -41,19 +41,18 @@ section{padding:75px 8%}
 .contact{text-align:center}
 footer{padding:25px;text-align:center;background:#111;color:#888;border-top:1px solid #292929}
 footer span{color:var(--red)}
-.brand img {
-  width: 85px;
-  height: 65px;
-  object-fit: contain;
-  display: block;
+@media(max-width:600px){
+header{padding:17px 5%;flex-wrap:wrap;gap:15px}
+nav{width:100%;display:flex;justify-content:space-between}
+nav a{margin:0;font-size:12px}
+.hero{min-height:480px;padding:55px 7%}
+section{padding:55px 6%}
 }
 </style>
 </head>
 <body>
 <header>
-<a href="#home" class="brand">
-  <img src="100360-removebg-preview.png" alt="MX ESPORTS Logo">
-</a>
+<div class="logo">MX <span>ESPORTS</span></div>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -94,130 +93,11 @@ footer span{color:var(--red)}
 <p>Creating opportunities for gamers through teamwork and competition.</p>
 </div>
 </div>
-
-  
-<section id="team">
-<style>
-.profile-card{
- background:#151515;border:1px solid #333;border-radius:12px;
- padding:28px 15px;text-align:center;cursor:pointer;
- transition:.3s;
-}
-.profile-card:hover{border-color:#ff3030;transform:translateY(-5px)}
-.profile-card h3{color:#ff3030;margin:12px}
-.profile-card p{color:#aaa}
-.profile-btn{
- background:#ff3030;color:white;border:0;padding:11px 20px;
- border-radius:6px;margin-top:15px;font-weight:bold;cursor:pointer
-}
-.mx-modal{
- display:none;position:fixed;inset:0;background:#000d;
- z-index:9999;align-items:center;justify-content:center;padding:18px
-}
-.mx-modal.active{display:flex}
-.mx-modal-content{
- background:#151515;border:1px solid #ff3030;border-radius:15px;
- padding:28px 20px;width:100%;max-width:370px;text-align:center;
- position:relative
-}
-.mx-avatar{
- width:100px;height:100px;object-fit:contain;
- background:#252525;border-radius:50%;padding:10px;margin:12px auto
-}
-.mx-social{
- display:block;text-decoration:none;color:white;
- background:#252525;padding:13px;margin-top:10px;
- border-radius:7px;font-weight:bold
-}
-.mx-social:hover{background:#ff3030}
-.mx-close{
- position:absolute;right:15px;top:10px;
- background:none;border:0;color:white;font-size:28px;cursor:pointer
-}
-</style>
-
-<h2 class="heading">OUR <span>TEAM</span></h2>
-<p class="sub">Meet the MX ESPORTS Management</p>
-
-<div class="cards">
-
-<div class="profile-card" onclick="openMXProfile('ravi')">
- <img src="logo.png" class="mx-avatar" alt="MX Logo">
- <h3>RAVI ARYA</h3>
- <p>👑 OWNER</p>
- <button class="profile-btn">VIEW PROFILE →</button>
-</div>
-
-<div class="profile-card" onclick="openMXProfile('niku')">
- <img src="logo.png" class="mx-avatar" alt="MX Logo">
- <h3>NIKU</h3>
- <p>🛡️ FOUNDER</p>
- <button class="profile-btn">VIEW PROFILE →</button>
-</div>
-
-<div class="profile-card">
- <div class="icon">🎯</div>
- <h3>MX PLAYERS</h3>
- <p>Official Competitive Roster</p>
-</div>
-
-</div>
-
-<!-- RAVI PROFILE -->
-<div class="mx-modal" id="ravi">
- <div class="mx-modal-content">
-  <button class="mx-close" onclick="closeMXProfile('ravi')">×</button>
-  <img src="logo.png" class="mx-avatar" alt="MX ESPORTS">
-  <h2 style="color:white">RAVI ARYA</h2>
-  <p style="color:#ff3030;margin:8px">OWNER • MX ESPORTS</p>
-  <p style="color:#aaa">MAXIMUM XTREME</p>
-
-  <a class="mx-social" href="https://www.instagram.com/officialmxislive" target="_blank" rel="noopener">📸 Instagram</a>
-  <a class="mx-social" href="https://youtube.com/@mxislive18" target="_blank" rel="noopener">▶ YouTube Channel</a>
-  <a class="mx-social" href="https://whatsapp.com/channel/0029VbCUDlTGufIuxMLN4z18" target="_blank" rel="noopener">💬 WhatsApp Channel</a>
-  <a class="mx-social" href="https://t.me/mxesports" target="_blank" rel="noopener">✈ Telegram Channel</a>
- </div>
-</div>
-
-<!-- NIKU PROFILE -->
-<div class="mx-modal" id="niku">
- <div class="mx-modal-content">
-  <button class="mx-close" onclick="closeMXProfile('niku')">×</button>
-  <img src="logo.png" class="mx-avatar" alt="MX ESPORTS">
-  <h2 style="color:white">NIKU</h2>
-  <p style="color:#ff3030;margin:10px">FOUNDER • MX ESPORTS</p>
-  <p style="color:#aaa">MAXIMUM XTREME</p>
-  <p style="color:#ccc;margin-top:20px">Building the MX ESPORTS family.</p>
- </div>
-</div>
-
-<script>
-function openMXProfile(id){
- document.getElementById(id).classList.add('active');
- document.body.style.overflow='hidden';
-}
-function closeMXProfile(id){
- document.getElementById(id).classList.remove('active');
- document.body.style.overflow='';
-}
-document.querySelectorAll('.mx-modal').forEach(function(modal){
- modal.addEventListener('click',function(e){
-  if(e.target===modal){
-   modal.classList.remove('active');
-   document.body.style.overflow='';
-  }
- });
-});
-document.addEventListener('keydown',function(e){
- if(e.key==='Escape'){
-  document.querySelectorAll('.mx-modal').forEach(function(modal){
-   modal.classList.remove('active');
-  });
-  document.body.style.overflow='';
- }
-});
-</script>
 </section>
+
+<section id="team">
+<h2 class="heading">OUR <span>TEAM</span></h2>
+<p class="sub">Meet the MX ESPORTS family</p>
 <div class="cards">
 <div class="card team-card">
 <div class="icon">👑</div>
@@ -226,130 +106,6 @@ document.addEventListener('keydown',function(e){
 </div>
 <div class="card team-card">
 <div class="icon">🎯</div>
-  
-<section id="team">
-<style>
-.profile-card{
- background:#151515;border:1px solid #333;border-radius:12px;
- padding:28px 15px;text-align:center;cursor:pointer;
- transition:.3s;
-}
-.profile-card:hover{border-color:#ff3030;transform:translateY(-5px)}
-.profile-card h3{color:#ff3030;margin:12px}
-.profile-card p{color:#aaa}
-.profile-btn{
- background:#ff3030;color:white;border:0;padding:11px 20px;
- border-radius:6px;margin-top:15px;font-weight:bold;cursor:pointer
-}
-.mx-modal{
- display:none;position:fixed;inset:0;background:#000d;
- z-index:9999;align-items:center;justify-content:center;padding:18px
-}
-.mx-modal.active{display:flex}
-.mx-modal-content{
- background:#151515;border:1px solid #ff3030;border-radius:15px;
- padding:28px 20px;width:100%;max-width:370px;text-align:center;
- position:relative
-}
-.mx-avatar{
- width:100px;height:100px;object-fit:contain;
- background:#252525;border-radius:50%;padding:10px;margin:12px auto
-}
-.mx-social{
- display:block;text-decoration:none;color:white;
- background:#252525;padding:13px;margin-top:10px;
- border-radius:7px;font-weight:bold
-}
-.mx-social:hover{background:#ff3030}
-.mx-close{
- position:absolute;right:15px;top:10px;
- background:none;border:0;color:white;font-size:28px;cursor:pointer
-}
-</style>
-
-<h2 class="heading">OUR <span>TEAM</span></h2>
-<p class="sub">Meet the MX ESPORTS Management</p>
-
-<div class="cards">
-
-<div class="profile-card" onclick="openMXProfile('ravi')">
- <img src="logo.png" class="mx-avatar" alt="MX Logo">
- <h3>RAVI ARYA</h3>
- <p>👑 OWNER</p>
- <button class="profile-btn">VIEW PROFILE →</button>
-</div>
-
-<div class="profile-card" onclick="openMXProfile('niku')">
- <img src="logo.png" class="mx-avatar" alt="MX Logo">
- <h3>NIKU</h3>
- <p>🛡️ FOUNDER</p>
- <button class="profile-btn">VIEW PROFILE →</button>
-</div>
-
-<div class="profile-card">
- <div class="icon">🎯</div>
- <h3>MX PLAYERS</h3>
- <p>Official Competitive Roster</p>
-</div>
-
-</div>
-
-<!-- RAVI PROFILE -->
-<div class="mx-modal" id="ravi">
- <div class="mx-modal-content">
-  <button class="mx-close" onclick="closeMXProfile('ravi')">×</button>
-  <img src="logo.png" class="mx-avatar" alt="MX ESPORTS">
-  <h2 style="color:white">RAVI ARYA</h2>
-  <p style="color:#ff3030;margin:8px">OWNER • MX ESPORTS</p>
-  <p style="color:#aaa">MAXIMUM XTREME</p>
-
-  <a class="mx-social" href="https://www.instagram.com/officialmxislive" target="_blank" rel="noopener">📸 Instagram</a>
-  <a class="mx-social" href="https://youtube.com/@mxislive18" target="_blank" rel="noopener">▶ YouTube Channel</a>
-  <a class="mx-social" href="https://whatsapp.com/channel/0029VbCUDlTGufIuxMLN4z18" target="_blank" rel="noopener">💬 WhatsApp Channel</a>
-  <a class="mx-social" href="https://t.me/mxesports" target="_blank" rel="noopener">✈ Telegram Channel</a>
- </div>
-</div>
-
-<!-- NIKU PROFILE -->
-<div class="mx-modal" id="niku">
- <div class="mx-modal-content">
-  <button class="mx-close" onclick="closeMXProfile('niku')">×</button>
-  <img src="logo.png" class="mx-avatar" alt="MX ESPORTS">
-  <h2 style="color:white">NIKU</h2>
-  <p style="color:#ff3030;margin:10px">FOUNDER • MX ESPORTS</p>
-  <p style="color:#aaa">MAXIMUM XTREME</p>
-  <p style="color:#ccc;margin-top:20px">Building the MX ESPORTS family.</p>
- </div>
-</div>
-
-<script>
-function openMXProfile(id){
- document.getElementById(id).classList.add('active');
- document.body.style.overflow='hidden';
-}
-function closeMXProfile(id){
- document.getElementById(id).classList.remove('active');
- document.body.style.overflow='';
-}
-document.querySelectorAll('.mx-modal').forEach(function(modal){
- modal.addEventListener('click',function(e){
-  if(e.target===modal){
-   modal.classList.remove('active');
-   document.body.style.overflow='';
-  }
- });
-});
-document.addEventListener('keydown',function(e){
- if(e.key==='Escape'){
-  document.querySelectorAll('.mx-modal').forEach(function(modal){
-   modal.classList.remove('active');
-  });
-  document.body.style.overflow='';
- }
-});
-</script>
-</section>
-
 <h3>MX PLAYERS</h3>
 <p>Competitive Gaming Roster</p>
 </div>
