@@ -10,362 +10,178 @@
 <meta name="theme-color" content="#080808">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #080808;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-:root {
-    --red: #ed172b;
-    --dark: #111;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;color:white;font-family:Arial,sans-serif}
+:root{--red:#ed172b;--dark:#111}
+a{text-decoration:none;color:inherit}
 
 /* HEADER */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #080808f5;
-    border-bottom: 1px solid #222;
-    padding: 15px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+position:sticky;top:0;z-index:100;
+background:#080808f5;border-bottom:1px solid #222;
+padding:15px 7%;display:flex;
+justify-content:space-between;align-items:center;
 }
-
-.logo img {
-    height: 60px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-    display: block;
+.logo img{
+height:60px;width:auto;max-width:200px;
+object-fit:contain;display:block;
 }
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    font-size: 13px;
-    color: #ccc;
-    font-weight: bold;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: var(--red);
-}
+nav{display:flex;gap:25px}
+nav a{font-size:13px;color:#ccc;font-weight:bold;transition:.3s}
+nav a:hover{color:var(--red)}
 
 /* HERO */
-
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 70px 20px;
-
-    background:
-    radial-gradient(
-        ellipse at center,
-        #401016 0%,
-        #16090c 35%,
-        #080808 75%
-    );
+.hero{
+min-height:85vh;display:flex;align-items:center;
+justify-content:center;text-align:center;padding:70px 20px;
+background:radial-gradient(ellipse at center,#401016 0%,#16090c 35%,#080808 75%);
 }
-
-.hero h1 {
-    font-size: clamp(55px,12vw,115px);
-    font-weight: 1000;
-    letter-spacing: 5px;
+.hero h1{font-size:clamp(55px,12vw,115px);font-weight:1000;letter-spacing:5px}
+.hero h1 span{color:var(--red)}
+.hero h2{letter-spacing:7px;color:#ddd;font-size:18px;margin-top:10px}
+.hero p{color:#aaa;margin:25px auto;max-width:550px;line-height:1.7}
+.btn{
+display:inline-block;background:var(--red);padding:14px 30px;
+border-radius:4px;font-weight:bold;margin:8px;transition:.3s;
 }
-
-.hero h1 span {
-    color: var(--red);
-}
-
-.hero h2 {
-    letter-spacing: 7px;
-    color: #ddd;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.hero p {
-    color: #aaa;
-    margin: 25px auto;
-    max-width: 550px;
-    line-height: 1.7;
-}
-
-.btn {
-    display: inline-block;
-    background: var(--red);
-    padding: 14px 30px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin: 8px;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: white;
-    color: black;
-    transform: translateY(-3px);
-}
-
-.btn.outline {
-    background: transparent;
-    border: 1px solid var(--red);
-}
+.btn:hover{background:white;color:black;transform:translateY(-3px)}
+.btn.outline{background:transparent;border:1px solid var(--red)}
 
 /* GENERAL SECTIONS */
-
-section {
-    padding: 85px 8%;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 34px;
-    margin-bottom: 15px;
-}
-
-.section-title span {
-    color: var(--red);
-}
-
-.subtitle {
-    color: #888;
-    margin-bottom: 45px;
-}
+section{padding:85px 8%;text-align:center}
+.section-title{font-size:34px;margin-bottom:15px}
+.section-title span{color:var(--red)}
+.subtitle{color:#888;margin-bottom:45px}
 
 /* MANAGEMENT */
-
-.management {
-    background: linear-gradient(120deg,#21090d,#101010);
-    border: 1px solid #43121a;
-    border-radius: 12px;
-    max-width: 750px;
-    margin: auto;
-    padding: 40px 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 35px;
+.management{
+background:linear-gradient(120deg,#21090d,#101010);
+border:1px solid #43121a;border-radius:12px;
+max-width:750px;margin:auto;padding:40px 20px;
+display:flex;flex-direction:column;align-items:center;
+text-align:center;gap:35px;
 }
-
-.member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 12px;
+.member{
+display:flex;flex-direction:column;align-items:center;
+justify-content:center;width:100%;gap:12px;
 }
-
-.member h3 {
-    font-size: 30px;
-    color: white;
-    margin: 0;
+.member h3{font-size:30px;color:white}
+.member .role{color:#aaa;font-size:18px}
+.instagram-btn{
+display:inline-block;background:var(--red);color:white;
+padding:13px 35px;min-width:180px;border-radius:6px;
+font-weight:bold;font-size:15px;margin-top:5px;transition:.3s;
 }
-
-.member .role {
-    color: #aaa;
-    font-size: 18px;
-    margin: 0;
-}
-
-.instagram-btn {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    padding: 13px 35px;
-    min-width: 180px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 15px;
-    margin-top: 5px;
-    transition: .3s;
-}
-
-.instagram-btn:hover {
-    background: white;
-    color: var(--red);
-}
-
-.management-tagline {
-    color: #aaa;
-    font-size: 16px;
-}
+.instagram-btn:hover{background:white;color:var(--red)}
+.management-tagline{color:#aaa;font-size:16px}
 
 /* ABOUT */
-
-.about-box {
-    max-width: 850px;
-    margin: auto;
-    background: #121212;
-    border: 1px solid #242424;
-    padding: 35px;
-    border-radius: 10px;
-    line-height: 1.9;
-    color: #bbb;
-    text-align: left;
+.about-box{
+max-width:850px;margin:auto;background:#121212;
+border:1px solid #242424;padding:35px;border-radius:10px;
+line-height:1.9;color:#bbb;text-align:left;
 }
+.about-box h3{color:var(--red);margin:20px 0 8px}
+.about-box ul{padding-left:22px}
 
-.about-box h3 {
-    color: var(--red);
-    margin: 20px 0 8px;
+/* PLAYER PROFILES */
+.player-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,320px));
+justify-content:center;gap:25px;max-width:1100px;margin:auto;
 }
-
-.about-box ul {
-    padding-left: 22px;
+.player-card{
+background:linear-gradient(145deg,#1c1113,#090909);
+border:1px solid #43121a;border-top:3px solid var(--red);
+border-radius:12px;padding:25px 20px;text-align:center;
+transition:.3s;
 }
-
-/* TEAMS */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
+.player-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px #ed172b30;
 }
-
-.card {
-    background: #121212;
-    border: 1px solid #292929;
-    border-radius: 10px;
-    padding: 35px 20px;
-    transition: .3s;
+.player-photo{
+width:115px;height:115px;margin:0 auto 18px;
+border:3px solid var(--red);border-radius:50%;
+overflow:hidden;background:#211719;
+display:flex;align-items:center;justify-content:center;
 }
-
-.card:hover {
-    border-color: var(--red);
-    transform: translateY(-7px);
+.player-photo img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{color:var(--red);font-size:35px;font-weight:900}
+.player-badge{
+color:var(--red);font-size:11px;font-weight:bold;
+letter-spacing:2px;margin-bottom:12px;
 }
-
-.card .symbol {
-    font-size: 42px;
-    margin-bottom: 20px;
+.player-card h3{font-size:25px;margin-bottom:7px}
+.player-ign{color:#aaa;margin-bottom:22px;font-size:14px}
+.player-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.player-stats div{background:#211719;border-radius:7px;padding:15px 5px}
+.player-stats strong{display:block;color:var(--red);font-size:25px;margin-bottom:5px}
+.player-stats span{color:#aaa;font-size:10px}
+.player-uid{
+display:flex;justify-content:space-between;gap:8px;
+margin:20px 0;padding:12px;background:#211719;
+border-radius:6px;font-size:12px;
 }
+.player-uid span{color:#aaa}
+.player-uid strong{color:white}
+.player-card .instagram-btn{display:block;width:100%;margin-top:10px}
 
-.card h3 {
-    margin-bottom: 12px;
-    color: white;
+/* TEAMS AND PLAYERS CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;max-width:1100px;margin:auto;
 }
-
-.card p {
-    color: #888;
-    line-height: 1.6;
-    font-size: 14px;
+.card{
+background:#121212;border:1px solid #292929;
+border-radius:10px;padding:35px 20px;transition:.3s;
+display:block;
+}
+.card:hover{
+border-color:var(--red);
+transform:translateY(-7px);
+}
+.card .symbol{font-size:42px;margin-bottom:20px}
+.card h3{margin-bottom:12px;color:white}
+.card p{color:#888;line-height:1.6;font-size:14px}
+a.card:focus-visible{
+outline:2px solid var(--red);
+outline-offset:4px;
 }
 
 /* CONTACT */
-
-.socials {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
+.socials{
+display:flex;justify-content:center;flex-wrap:wrap;
+gap:15px;margin-top:25px;
 }
-
-.socials a {
-    border: 1px solid #444;
-    padding: 13px 22px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: .3s;
+.socials a{
+border:1px solid #444;padding:13px 22px;
+border-radius:5px;font-weight:bold;transition:.3s;
 }
-
-.socials a:hover {
-    background: var(--red);
-    border-color: var(--red);
-}
+.socials a:hover{background:var(--red);border-color:var(--red)}
 
 /* FOOTER */
-
-footer {
-    background: #050505;
-    text-align: center;
-    padding: 30px 15px;
-    border-top: 1px solid #222;
-    color: #777;
-    font-size: 13px;
-    line-height: 2;
+footer{
+background:#050505;text-align:center;padding:30px 15px;
+border-top:1px solid #222;color:#777;font-size:13px;line-height:2;
 }
+footer strong{color:var(--red)}
 
-footer strong {
-    color: var(--red);
-}
-
-/* MOBILE RESPONSIVE */
-
-@media(max-width:650px) {
-
-    header {
-        padding: 15px 5%;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo img {
-        height: 50px;
-        max-width: 160px;
-    }
-
-    nav {
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    section {
-        padding: 65px 6%;
-    }
-
-    .hero {
-        min-height: 75vh;
-    }
-
-    .management {
-        padding: 30px 15px;
-        gap: 30px;
-    }
-
-    .member h3 {
-        font-size: 26px;
-    }
-
-    .about-box {
-        padding: 22px;
-    }
+/* MOBILE */
+@media(max-width:650px){
+header{padding:15px 5%;flex-direction:column;gap:15px}
+.logo img{height:50px;max-width:160px}
+nav{gap:12px;flex-wrap:wrap;justify-content:center}
+nav a{font-size:10px}
+section{padding:65px 6%}
+.hero{min-height:75vh}
+.management{padding:30px 15px;gap:30px}
+.member h3{font-size:26px}
+.about-box{padding:22px}
+.player-grid{grid-template-columns:1fr}
+.player-card{max-width:380px;width:100%;margin:auto}
 }
 </style>
 </head>
@@ -373,307 +189,227 @@ footer strong {
 <body>
 
 <!-- HEADER -->
-
 <header>
+<div class="logo">
+<img src="100360-removebg-preview.png" alt="MX ESPORTS Logo">
+</div>
 
-    <div class="logo">
-        <img src="100360-removebg-preview.png"
-        alt="MX ESPORTS Logo">
-    </div>
-
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#management">MANAGEMENT</a>
-        <a href="#teams">TEAMS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
-
+<nav>
+<a href="#home">HOME</a>
+<a href="#management">MANAGEMENT</a>
+<a href="#players">PLAYERS</a>
+<a href="#about">ABOUT</a>
+<a href="#contact">CONTACT</a>
+</nav>
 </header>
 
 <main>
 
 <!-- HOME -->
-
 <section class="hero" id="home">
+<div>
+<h1>MX <span>ESPORTS</span></h1>
+<h2>MAXIMUM XTREME</h2>
+<p>
+Welcome to the official home of MX ESPORTS.
+Compete with passion. Play with purpose.
+Dominate with Maximum Xtreme.
+</p>
 
-    <div>
-
-        <h1>MX <span>ESPORTS</span></h1>
-
-        <h2>MAXIMUM XTREME</h2>
-
-        <p>
-            Welcome to the official home of MX ESPORTS.
-            Compete with passion. Play with purpose.
-            Dominate with Maximum Xtreme.
-        </p>
-
-        <a class="btn" href="#teams">
-            EXPLORE TEAMS
-        </a>
-
-        <a class="btn outline"
-        href="https://www.instagram.com/officialmxesports"
-        target="_blank">
-            FOLLOW US
-        </a>
-
-    </div>
-
+<a class="btn" href="#players">VIEW PLAYERS</a>
+<a class="btn outline"
+href="https://www.instagram.com/officialmxesports"
+target="_blank" rel="noopener noreferrer">FOLLOW US</a>
+</div>
 </section>
 
 <!-- MANAGEMENT -->
-
 <section id="management">
+<h2 class="section-title">MX <span>MANAGEMENT</span></h2>
+<p class="subtitle">BEHIND THE ORGANIZATION</p>
 
-    <h2 class="section-title">
-        MX <span>MANAGEMENT</span>
-    </h2>
+<div class="management">
 
-    <p class="subtitle">
-        BEHIND THE ORGANIZATION
-    </p>
+<div class="member">
+<h3>RAVI ARYA</h3>
+<p class="role">Owner</p>
+<a class="instagram-btn"
+href="https://www.instagram.com/officialmxislive/"
+target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+</div>
 
-    <div class="management">
+<div class="member">
+<h3>Niku Bhaiya</h3>
+<p class="role">Founder</p>
+<a class="instagram-btn"
+href="https://www.instagram.com/niku_bhaiya5/"
+target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+</div>
 
-        <!-- OWNER -->
+<div class="member">
+<h3>Aditya</h3>
+<p class="role">Leader</p>
+<a class="instagram-btn"
+href="https://www.instagram.com/officialmxaditya18/"
+target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+</div>
 
-        <div class="member">
+<p class="management-tagline">
+Building the future of MX ESPORTS.
+</p>
 
-            <h3>RAVI ARYA</h3>
+</div>
+</section>
 
-            <p class="role">Owner</p>
+<!-- PLAYERS -->
+<section id="players">
 
-            <a class="instagram-btn"
-            href="https://www.instagram.com/officialmxislive/"
-            target="_blank">
-                INSTAGRAM ↗
-            </a>
+<h2 class="section-title">OUR <span>PLAYERS</span></h2>
+<p class="subtitle">OFFICIAL PLAYER ROSTER & PERFORMANCE</p>
 
-        </div>
+<div class="player-grid">
 
-        <!-- FOUNDER -->
+<div class="player-card">
 
-        <div class="member">
+<div class="player-photo">
+<img src="" alt="Ravi Arya" hidden>
+<div class="photo-placeholder">MX</div>
+</div>
 
-            <h3>Niku</h3>
+<div class="player-badge">MX ESPORTS PLAYER</div>
 
-            <p class="role">Founder</p>
+<h3>RAVI ARYA</h3>
+<p class="player-ign">MXisLiVE18</p>
 
-            <a class="instagram-btn"
-            href="https://www.instagram.com/niku_bhaiya5/"
-            target="_blank">
-                INSTAGRAM ↗
-            </a>
+<div class="player-stats">
+<div><strong>12</strong><span>TOURNAMENTS</span></div>
+<div><strong>18</strong><span>MATCHES</span></div>
+<div><strong>48</strong><span>TOTAL KILLS</span></div>
+<div><strong>6</strong><span>TOP KILLS</span></div>
+</div>
 
-        </div>
+<div class="player-uid">
+<span>BGMI UID</span>
+<strong>5522401073</strong>
+</div>
 
-        <!-- LEADER -->
+<a class="instagram-btn"
+href="https://www.instagram.com/officialmxislive/"
+target="_blank" rel="noopener noreferrer">
+INSTAGRAM ↗
+</a>
 
-        <div class="member">
-
-            <h3>Aditya</h3>
-
-            <p class="role">Leader</p>
-
-            <a class="instagram-btn"
-            href="https://www.instagram.com/officialmxaditya18/"
-            target="_blank">
-                INSTAGRAM ↗
-            </a>
-
-        </div>
-
-        <p class="management-tagline">
-            Building the future of MX ESPORTS.
-        </p>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
-
 <section id="about">
+<h2 class="section-title">ABOUT <span>MX</span></h2>
+<p class="subtitle">MORE THAN A TEAM. IT'S A LEGACY.</p>
 
-    <h2 class="section-title">
-        ABOUT <span>MX</span>
-    </h2>
+<div class="about-box">
 
-    <p class="subtitle">
-        MORE THAN A TEAM. IT'S A LEGACY.
-    </p>
+<p><strong>MX ESPORTS stands for MAXIMUM XTREME.</strong></p>
 
-    <div class="about-box">
+<p>
+Founded in 2021, MX ESPORTS is an Indian esports organization
+with a vision to build a competitive gaming community and
+create opportunities for passionate gamers.
+</p>
 
-        <p>
-            <strong>MX ESPORTS stands for MAXIMUM XTREME.</strong>
-        </p>
+<p>
+What started as a passion for gaming has grown into a journey
+of teamwork, dedication, competition, and ambition.
+</p>
 
-        <p>
-            Founded in 2021, MX ESPORTS is an Indian
-            esports organization with a vision to build
-            a competitive gaming community and create
-            opportunities for passionate gamers.
-        </p>
+<h3>OUR VISION</h3>
+<p>
+To become a recognized name in the Indian esports ecosystem
+through talent, discipline, and consistent performance.
+</p>
 
-        <p>
-            What started as a passion for gaming has
-            grown into a journey of teamwork, dedication,
-            competition, and ambition.
-        </p>
+<h3>WHAT WE DO</h3>
+<ul>
+<li>Competitive Esports Teams</li>
+<li>BGMI Tournament Participation</li>
+<li>Player Development & Recruitment</li>
+<li>Team Management</li>
+<li>Esports Community Building</li>
+</ul>
 
-        <h3>OUR VISION</h3>
+<h3>OUR IDENTITY</h3>
+<p>MX = MAXIMUM XTREME</p>
+<p>
+We believe in pushing limits, building champions,
+and creating our own legacy.
+</p>
 
-        <p>
-            To become a recognized name in the Indian
-            esports ecosystem through talent, discipline,
-            and consistent performance.
-        </p>
+<h3>EST. 2021 — THE JOURNEY CONTINUES.</h3>
+<p>Play Hard. Stay United. Dominate Together.</p>
 
-        <h3>WHAT WE DO</h3>
-
-        <ul>
-            <li>Competitive Esports Teams</li>
-            <li>BGMI Tournament Participation</li>
-            <li>Player Development & Recruitment</li>
-            <li>Team Management</li>
-            <li>Esports Community Building</li>
-        </ul>
-
-        <h3>OUR IDENTITY</h3>
-
-        <p>
-            MX = MAXIMUM XTREME
-        </p>
-
-        <p>
-            We believe in pushing limits, building
-            champions, and creating our own legacy.
-        </p>
-
-        <h3>EST. 2021 — THE JOURNEY CONTINUES.</h3>
-
-        <p>
-            Play Hard. Stay United. Dominate Together.
-        </p>
-
-    </div>
-
+</div>
 </section>
 
 <!-- TEAMS -->
-
 <section id="teams">
+<h2 class="section-title">OUR <span>DIVISIONS</span></h2>
+<p class="subtitle">THE NEXT GENERATION OF COMPETITIVE GAMING</p>
 
-    <h2 class="section-title">
-        OUR <span>TEAMS</span>
-    </h2>
+<div class="cards">
 
-    <p class="subtitle">
-        THE NEXT GENERATION OF COMPETITIVE GAMING
-    </p>
+<div class="card">
+<div class="symbol">🎮</div>
+<h3>MX ESPORTS</h3>
+<p>Main competitive esports division.</p>
+</div>
 
-    <div class="cards">
+<a class="card" href="#players">
+<div class="symbol">🏆</div>
+<h3>PLAYERS</h3>
+<p>Explore official MX ESPORTS player profiles, BGMI IDs and performance statistics.</p>
+</a>
 
-        <div class="card">
+<div class="card">
+<div class="symbol">🔥</div>
+<h3>MX COMMUNITY</h3>
+<p>Silent moves. Powerful performance.</p>
+</div>
 
-            <div class="symbol">🎮</div>
-
-            <h3>MX ESPORTS</h3>
-
-            <p>
-                Main competitive esports division.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <div class="symbol">⚡</div>
-
-            <h3>Players</h3>
-
-            <p>
-                Competitive gaming division.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <div class="symbol">🔥</div>
-
-            <h3>MX COMMUNITY</h3>
-
-            <p>
-                Silent moves. Powerful performance.
-            </p>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
+<h2 class="section-title">CONNECT <span>WITH US</span></h2>
+<p class="subtitle">FOLLOW OUR JOURNEY</p>
 
-    <h2 class="section-title">
-        CONNECT <span>WITH US</span>
-    </h2>
+<div class="socials">
 
-    <p class="subtitle">
-        FOLLOW OUR JOURNEY
-    </p>
+<a href="https://www.instagram.com/officialmxislive/"
+target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
 
-    <div class="socials">
+<a href="https://youtube.com/@mxislive18"
+target="_blank" rel="noopener noreferrer">YOUTUBE</a>
 
-        <a href="https://www.instagram.com/officialmxislive/"
-        target="_blank">
-            INSTAGRAM
-        </a>
+<a href="https://discord.gg/dCqtE8dt2r"
+target="_blank" rel="noopener noreferrer">DISCORD</a>
 
-        <a href="https://youtube.com/@mxislive18"
-        target="_blank">
-            YOUTUBE
-        </a>
-
-        <a href="https://discord.gg/dCqtE8dt2r"
-        target="_blank">
-            DISCORD
-        </a>
-
-    </div>
-
+</div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-
 <footer>
-
-    <strong>MX ESPORTS</strong>
-
-    <br>
-
-    MAXIMUM XTREME
-
-    <br>
-
-    © <span id="year"></span>
-    MX ESPORTS. All Rights Reserved.
-
+<strong>MX ESPORTS</strong><br>
+MAXIMUM XTREME<br>
+© <span id="year"></span> MX ESPORTS. All Rights Reserved.
 </footer>
 
 <script>
-
 document.getElementById("year").textContent =
 new Date().getFullYear();
-
 </script>
 
 </body>
