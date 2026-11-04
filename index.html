@@ -9,50 +9,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
-<div class="management-popup" id="managementPopup">
- <div class="management-box">
-
-  <button class="management-close"
-  onclick="closeManagement()">×</button>
-
-  <h2 style="color:#ff3030">MX MANAGEMENT</h2>
-  <p style="color:#aaa">MAXIMUM XTREME</p>
-
-  <div class="management-person">
-   <img src="logo.png" width="75" alt="MX Logo">
-   <h3>RAVI ARYA</h3>
-   <p>👑 OWNER</p>
-
-   <a href="https://www.instagram.com/officialmxislive" target="_blank">📸 Instagram</a>
-   <a href="https://youtube.com/@mxislive18" target="_blank">▶ YouTube</a>
-   <a href="https://whatsapp.com/channel/0029VbCUDlTGufIuxMLN4z18" target="_blank">💬 WhatsApp Channel</a>
-   <a href="https://t.me/mxesports" target="_blank">✈ Telegram</a>
-  </div>
-
-  <div class="management-person">
-   <img src="logo.png" width="75" alt="MX Logo">
-   <h3>NIKU</h3>
-   <p>🛡️ FOUNDER</p>
-
-   <a href="https://www.instagram.com/niku_bhaiya5" target="_blank">📸 Instagram</a>
-  </div>
-
- </div>
-</div>
-
-<script>
-function openManagement(){
- document.getElementById("managementPopup").classList.add("show");
-}
-function closeManagement(){
- document.getElementById("managementPopup").classList.remove("show");
-}
-document.getElementById("managementPopup").addEventListener("click",function(e){
- if(e.target===this) closeManagement();
-});
-</script>
-  
 body{background:#080808;color:white;font-family:Arial,sans-serif}
 :root{--red:#ff3030;--dark:#111}
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:#101010;border-bottom:1px solid #292929;position:sticky;top:0;z-index:10}
@@ -250,5 +206,49 @@ CONTACT MANAGEMENT
 <p>© 2026 <span>MX ESPORTS</span> | MAXIMUM XTREME</p>
 <p style="margin-top:8px">COMPETE • DOMINATE • CONQUER</p>
 </footer>
+ 
+<div class="management-popup" id="managementPopup">
+ <div class="management-box">
+
+  <button class="management-close"
+  onclick="closeManagement()">×</button>
+
+  <h2 style="color:#ff3030">MX MANAGEMENT</h2>
+  <p style="color:#aaa">MAXIMUM XTREME</p>
+
+  <div class="management-person">
+   <img src="logo.png" width="75" alt="MX Logo">
+   <h3>RAVI ARYA</h3>
+   <p>👑 OWNER</p>
+
+   <a href="https://www.instagram.com/officialmxislive" target="_blank">📸 Instagram</a>
+   <a href="https://youtube.com/@mxislive18" target="_blank">▶ YouTube</a>
+   <a href="https://whatsapp.com/channel/0029VbCUDlTGufIuxMLN4z18" target="_blank">💬 WhatsApp Channel</a>
+   <a href="https://t.me/mxesports" target="_blank">✈ Telegram</a>
+  </div>
+
+  <div class="management-person">
+   <img src="logo.png" width="75" alt="MX Logo">
+   <h3>NIKU</h3>
+   <p>🛡️ FOUNDER</p>
+
+   <a href="https://www.instagram.com/niku_bhaiya5" target="_blank">📸 Instagram</a>
+  </div>
+
+ </div>
+</div>
+
+<script>
+function openManagement(){
+ document.getElementById("managementPopup").classList.add("show");
+}
+function closeManagement(){
+ document.getElementById("managementPopup").classList.remove("show");
+}
+document.getElementById("managementPopup").addEventListener("click",function(e){
+ if(e.target===this) closeManagement();
+});
+</script>
+ 
 </body>
 </html>
